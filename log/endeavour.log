@@ -1,0 +1,16 @@
+2021-04-24 10:45:12.820 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting BackBootApplication on PhilPc with PID 9192 (D:\Code\projects\back-boot\target\classes started by Phil in D:\Code\projects\back-boot)
+2021-04-24 10:45:12.835 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2021-04-24 10:45:13.002 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-24 10:45:13.003 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-24 10:45:14.524 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8080 (http)
+2021-04-24 10:45:14.531 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8080"]
+2021-04-24 10:45:14.532 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2021-04-24 10:45:14.532 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-24 10:45:14.591 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2021-04-24 10:45:14.591 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1587 ms
+2021-04-24 10:45:15.323 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-24 10:45:15.416 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2021-04-24 10:45:15.629 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2021-04-24 10:45:15.643 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8080"]
+2021-04-24 10:45:15.660 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-24 10:45:15.669 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started BackBootApplication in 4.252 seconds (JVM running for 6.213)

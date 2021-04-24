@@ -1,0 +1,232 @@
+2021-04-23 10:06:41.484 -ERROR  [  restartedMain] LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:177)
+
+The following method did not exist:
+
+    org.apache.tomcat.util.modeler.Registry.disableRegistry()V
+
+The method's class, org.apache.tomcat.util.modeler.Registry, is available from the following locations:
+
+    jar:file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.6/tomcat-embed-core-9.0.6.jar!/org/apache/tomcat/util/modeler/Registry.class
+
+The class hierarchy was loaded from the following locations:
+
+    org.apache.tomcat.util.modeler.Registry: file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.6/tomcat-embed-core-9.0.6.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.tomcat.util.modeler.Registry
+
+2021-04-23 12:35:16.904 -ERROR  [  restartedMain] LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:177)
+
+The following method did not exist:
+
+    org.apache.tomcat.util.modeler.Registry.disableRegistry()V
+
+The method's class, org.apache.tomcat.util.modeler.Registry, is available from the following locations:
+
+    jar:file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.6/tomcat-embed-core-9.0.6.jar!/org/apache/tomcat/util/modeler/Registry.class
+
+The class hierarchy was loaded from the following locations:
+
+    org.apache.tomcat.util.modeler.Registry: file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.6/tomcat-embed-core-9.0.6.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.tomcat.util.modeler.Registry
+
+2021-04-23 12:37:17.265 -ERROR  [  restartedMain] LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:177)
+
+The following method did not exist:
+
+    org.apache.tomcat.util.modeler.Registry.disableRegistry()V
+
+The method's class, org.apache.tomcat.util.modeler.Registry, is available from the following locations:
+
+    jar:file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.6/tomcat-embed-core-9.0.6.jar!/org/apache/tomcat/util/modeler/Registry.class
+
+The class hierarchy was loaded from the following locations:
+
+    org.apache.tomcat.util.modeler.Registry: file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.6/tomcat-embed-core-9.0.6.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.tomcat.util.modeler.Registry
+
+2021-04-23 12:41:37.651 -ERROR  [  restartedMain] LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:177)
+
+The following method did not exist:
+
+    org.apache.tomcat.util.modeler.Registry.disableRegistry()V
+
+The method's class, org.apache.tomcat.util.modeler.Registry, is available from the following locations:
+
+    jar:file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.6/tomcat-embed-core-9.0.6.jar!/org/apache/tomcat/util/modeler/Registry.class
+
+The class hierarchy was loaded from the following locations:
+
+    org.apache.tomcat.util.modeler.Registry: file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.6/tomcat-embed-core-9.0.6.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.tomcat.util.modeler.Registry
+
+2021-04-23 12:56:46.585 -ERROR  [  restartedMain] LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:177)
+
+The following method did not exist:
+
+    org.apache.tomcat.util.modeler.Registry.disableRegistry()V
+
+The method's class, org.apache.tomcat.util.modeler.Registry, is available from the following locations:
+
+    jar:file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.6/tomcat-embed-core-9.0.6.jar!/org/apache/tomcat/util/modeler/Registry.class
+
+The class hierarchy was loaded from the following locations:
+
+    org.apache.tomcat.util.modeler.Registry: file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.6/tomcat-embed-core-9.0.6.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.tomcat.util.modeler.Registry
+
+2021-04-23 12:57:14.334 -ERROR  [  restartedMain] LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:177)
+
+The following method did not exist:
+
+    org.apache.tomcat.util.modeler.Registry.disableRegistry()V
+
+The method's class, org.apache.tomcat.util.modeler.Registry, is available from the following locations:
+
+    jar:file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.6/tomcat-embed-core-9.0.6.jar!/org/apache/tomcat/util/modeler/Registry.class
+
+The class hierarchy was loaded from the following locations:
+
+    org.apache.tomcat.util.modeler.Registry: file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.6/tomcat-embed-core-9.0.6.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.tomcat.util.modeler.Registry
+
+2021-04-23 13:00:11.404 -ERROR  [  restartedMain] LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:177)
+
+The following method did not exist:
+
+    org.apache.tomcat.util.modeler.Registry.disableRegistry()V
+
+The method's class, org.apache.tomcat.util.modeler.Registry, is available from the following locations:
+
+    jar:file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.6/tomcat-embed-core-9.0.6.jar!/org/apache/tomcat/util/modeler/Registry.class
+
+The class hierarchy was loaded from the following locations:
+
+    org.apache.tomcat.util.modeler.Registry: file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.6/tomcat-embed-core-9.0.6.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.tomcat.util.modeler.Registry
+
+2021-04-23 13:03:10.877 -ERROR  [  restartedMain] LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:177)
+
+The following method did not exist:
+
+    org.apache.tomcat.util.modeler.Registry.disableRegistry()V
+
+The method's class, org.apache.tomcat.util.modeler.Registry, is available from the following locations:
+
+    jar:file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.5/tomcat-embed-core-9.0.5.jar!/org/apache/tomcat/util/modeler/Registry.class
+
+The class hierarchy was loaded from the following locations:
+
+    org.apache.tomcat.util.modeler.Registry: file:/E:/maven/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.5/tomcat-embed-core-9.0.5.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.apache.tomcat.util.modeler.Registry
+

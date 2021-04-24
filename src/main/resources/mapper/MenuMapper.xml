@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.exp.backboot.mapper.MenuMapper">
+
+    <select id="selectAll" resultType="com.exp.backboot.pojo.EngineMenu">
+        select *
+        from engine_menu
+    </select>
+
+    <insert id="insert">
+        insert into engine_menu(name, path, tag, permission)
+        values (#{menu.name}, #{menu.path}, #{menu.tag}, #{menu.permission})
+    </insert>
+
+    <update id="update">
+        update engine_menu
+        <trim prefix="set" suffixOverrides=",">
+            <if test="menu.name != null">name = #{menu.name}</if>
+            <if test="menu.path != null">path = #{menu.path}</if>
+            <if test="menu.permission != null">permission = #{menu.permission}</if>
+        </trim>
+    </update>
+
+    <delete id="deleteById">
+        delete
+        from engine_menu
+        where id = #{id}
+    </delete>
+
+    <delete id="deleteBatch">
+        delete
+        from engine_menu
+        where id in
+        <foreach collection="ids" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>

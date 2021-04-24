@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.exp.backboot.mapper.ModelMapper">
+
+    <resultMap id="tableFull" type="com.exp.backboot.pojo.EngineTable">
+        <id column="id" property="id"/>
+        <result column="table_name" property="tableName"/>
+        <result column="status" property="status"/>
+        <result column="create_time" property="createTime"/>
+        <collection property="columns" ofType="com.exp.backboot.pojo.EngineTableColumn">
+            <id column="c_id" property="id"/>
+            <result column="column_name" property="columnName"/>
+            <result column="column_identifier" property="columnIdentifier"/>
+            <result column="column_type" property="columnType"/>
+            <result column="column_length" property="columnLength"/>
+            <result column="primary_key" property="primaryKey"/>
+            <result column="not_null" property="notNull"/>
+            <result column="remarks" property="remark"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectAll" resultType="com.exp.backboot.pojo.EngineTable">
+        select *
+        from engine_tables
+    </select>
+
+    <select id="selectById" resultMap="tableFull">
+        select et.id,
+               et.table_name,
+               et.`status`,
+               et.create_time,
+               etc.id as c_id,
+               etc.column_name,
+               etc.column_identifier,
+               etc.column_type,
+               etc.column_length,
+               etc.primary_key,
+               etc.not_null,
+               etc.remarks
+        from engine_tables et
+                 left join engine_table_columns etc on et.id = etc.main_id
+        where et.id = #{id}
+    </select>
+
+    <insert id="insertColumns">
+        insert into engine_table_columns(`main_id`, `column_name`, `column_identifier`, `column_type`,
+        `column_length`,`primary_key`, `not_null`, `remarks`)
+        values
+        <foreach collection="table.columns" item="item" separator=",">
+            (#{table.id}, #{item.columnName}, #{item.columnIdentifier}, #{item.columnType}, #{item.columnLength},
+            #{item.primaryKey},#{item.notNull}, #{item.remark})
+        </foreach>
+    </insert>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into engine_tables(`table_name`, `status`, `create_time`, `creator`)
+        values (#{table.tableName}, 0, now(), 0)
+    </insert>
+
+    <update id="update">
+        update engine_tables set
+        <trim suffixOverrides=",">
+            <if test="table.tableName != null">`table_name`=#{table.tableName},</if>
+            <if test="table.status != null">`status`=#{table.status},</if>
+        </trim>
+        where id = #{table.id}
+    </update>
+
+    <update id="updateColumns">
+        insert into engine_table_columns(main_id, column_name, column_identifier, column_type, column_length,
+        primary_key, not_null, remarks)
+        VALUES
+        <foreach collection="columns" item="column" separator=",">
+            (#{id}, #{column.columnName}, #{column.columnIdentifier}, #{column.columnType}, #{column.columnLength},
+            #{column.primaryKey}, #{column.notNull}, #{column.remark})
+        </foreach>
+        ON DUPLICATE KEY UPDATE
+        main_id = VALUES(main_id), column_name =
+        VALUES(column_name),column_identifier = VALUES(column_identifier),
+        column_type = VALUES(column_type),column_length = VALUES(column_length),primary_key = VALUES(primary_key),
+        not_null = VALUES(not_null),remarks = VALUES(remarks)
+    </update>
+
+    <delete id="deleteById">
+        delete
+        from engine_tables
+        where id = #{id}
+    </delete>
+
+    <delete id="deleteColumnsByMainId">
+        delete
+        from engine_table_columns
+        where main_id = #{mainId}
+    </delete>
+
+    <delete id="deleteColumnsByBeanBatch">
+        delete from engine_table_columns
+        where id in
+        <foreach collection="columns" item="column" open="(" close=")" separator=",">
+            #{column.id}
+        </foreach>
+    </delete>
+
+    <insert id="create">
+        create table ${wrapper.table.tableName} (
+        <foreach collection="wrapper.table.columns" item="column" separator=",">
+            ${column.columnIdentifier} ${column.columnType}
+            <if test="column.columnLength != null">(${column.columnLength})</if>
+            <if test="column.notNull">not null</if>
+            <if test="column.autoIncrement">auto_increment</if>
+            <if test="column.remark != null">COMMENT #{column.remark}</if>
+        </foreach>
+        ,primary key
+        <foreach collection="wrapper.primaryKeys" open="(" close=")" item="key" separator=",">
+            ${key.columnIdentifier}
+        </foreach>
+        )
+    </insert>
+
+    <delete id="dropTable">
+        drop table ${tableName}
+    </delete>
+
+    <insert id="insertTableColumns">
+        alter table ${tableName}
+        <foreach collection="columns" item="column" separator=",">
+            add column ${column.columnIdentifier} ${column.columnType}
+            <if test="column.columnLength != null">(${column.columnLength})</if>
+        </foreach>
+    </insert>
+
+    <delete id="deleteTableColumns">
+        alter table ${tableName}
+        <foreach collection="columns" item="column" separator=",">
+            drop column ${column.columnIdentifier}
+        </foreach>
+    </delete>
+
+    <update id="updateTableColumns">
+        alter table ${tableName}
+        <foreach collection="columns" item="column" separator=",">
+            modify column ${column.columnIdentifier} ${column.columnType}
+            <if test="column.columnLength != null">(${column.columnLength})</if>
+        </foreach>
+    </update>
+
+</mapper>
